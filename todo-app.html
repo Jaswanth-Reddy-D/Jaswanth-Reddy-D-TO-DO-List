@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Taskr — To Do List</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="app">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <p class="date-label" id="date-label"></p>
+      <h1 class="app-title">Today.</h1>
+    </div>
+    <div class="task-count" id="task-count">0 tasks</div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="progress-wrap" id="progress-wrap" style="display:none">
+    <div class="progress-meta">
+      <span>Progress</span>
+      <span id="progress-pct">0%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+    </div>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="active">Active</button>
+    <button class="filter-btn" data-filter="done">Done</button>
+    <button class="filter-btn" data-filter="high">🔴 High</button>
+  </div>
+
+  <!-- INPUT -->
+  <div class="input-card">
+    <input class="add-input" id="add-input" type="text" placeholder="Add a new task…" maxlength="120"/>
+    <select class="priority-select" id="priority-select">
+      <option value="low">🟢 Low</option>
+      <option value="medium" selected>🟡 Medium</option>
+      <option value="high">🔴 High</option>
+    </select>
+    <button class="add-btn" id="add-btn" title="Add task">+</button>
+  </div>
+
+  <!-- TASKS -->
+  <div class="tasks-container">
+    <div class="section-head">
+      <span id="list-label">Tasks</span>
+      <button class="clear-done-btn" id="clear-done-btn">Clear done</button>
+    </div>
+    <div id="task-list"></div>
+  </div>
+
+  <p class="hint">
+    Double-click a task to edit <br> <kbd>Enter</kbd> to add
+  </p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
