@@ -261,3 +261,12 @@
     border-radius: 4px; padding: 0.1rem 0.4rem;
     font-size: 0.7rem; font-family: var(--font-body);
   }
+
+  /* ─── FOOTER ─── */
+  footer {
+    position: fixed; bottom: 0; width: 100%;
+    text-align: center; padding: 2.5rem 6vw;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--muted);
+  }
+  footer span { color: var(--accent); }
